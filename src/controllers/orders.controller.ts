@@ -1,4 +1,4 @@
-export async function getInventoryDetails(ctx): Promise<void> {
+export async function createOrder(ctx): Promise<void> {
     try {
         ctx.body = {};
     } catch (err) {
@@ -6,7 +6,7 @@ export async function getInventoryDetails(ctx): Promise<void> {
     }
 }
 
-export async function getAllInventories(ctx): Promise<void> {
+export async function getOrderDetails(ctx): Promise<void> {
     try {
         ctx.body = {};
     } catch (err) {
@@ -15,6 +15,6 @@ export async function getAllInventories(ctx): Promise<void> {
 }
 
 export default {
-    getInventoryDetails,
-    getAllInventories
+    createOrder,
+    getOrderDetails
 };

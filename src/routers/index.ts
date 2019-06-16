@@ -1,11 +1,11 @@
 import * as compose from 'koa-compose';
-import UserRouter from './user.router';
-import OrderRouter from './order.router';
+import UsersRouter from './users.router';
+import OrdersRouter from './orders.router';
 import InventoryRouter from './inventory.router';
 
 const routers = [
-  UserRouter,
-  OrderRouter,
+  UsersRouter,
+  OrdersRouter,
   InventoryRouter
 ];
 
