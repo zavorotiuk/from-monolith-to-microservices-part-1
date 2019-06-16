@@ -1,6 +1,5 @@
 require('dotenv').config({ path: 'variables.env' });
 const port = process.env.PORT || 3000;
-const dialect = process.env.DB_DIALECT || 'mssql';
 
 const config = {
     server: {
@@ -11,7 +10,10 @@ const config = {
         password: process.env.DB_PASSWORD,
         server: process.env.DB_SERVER,
         database: process.env.DB_NAME,
-        dialect
+        port: process.env.DB_PORT,
+    },
+    jwt: {
+        secret: process.env.JWT_SECRET
     }
 };
 

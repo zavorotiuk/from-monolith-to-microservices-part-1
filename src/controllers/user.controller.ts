@@ -1,14 +1,18 @@
+import { createUser, getToken } from '../services/users.service';
+
 export async function signin(ctx): Promise<void> {
     try {
-        ctx.body = {};
+        const token = await getToken(ctx.request.body);
+        ctx.body = token;
     } catch (err) {
         ctx.app.emit('error', err, ctx);
     }
 }
 
 export async function signup(ctx): Promise<void> {
-    try {
-        ctx.body = {};
+    try { 
+        const user = await createUser(ctx.request.body);
+        ctx.body = user;
     } catch (err) {
         ctx.app.emit('error', err, ctx);
     }
