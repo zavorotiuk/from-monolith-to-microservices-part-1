@@ -1,0 +1,22 @@
+{
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "printWidth": 120,
+        "singleQuote": true
+      }
+    }, {
+      "files": "*",
+      "options": {
+        "printWidth": 120
+      }
+    }, {
+      "files": "*.json",
+      "options": {
+        "printWidth": 1000,
+        "proseWrap": "never"
+      }
+    }
+  ]
+}
