@@ -4,7 +4,6 @@ import { Types } from 'mongoose';
 import User from '../models/user.model';
 import config from '../core/config';
 
-
 export async function signin(ctx): Promise<void> {
     try {
         const users = await User.find({ email: ctx.request.body.email }).exec();
